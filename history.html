@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Prediction History</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">🌊 Flood Prediction System</div>
+    <div class="nav-links">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/predict">New Prediction</a>
+        <a href="/logout">Logout</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h2>My Prediction History</h2>
+
+    <div th:if="${predictions.empty}" class="info-box">
+        <p>No predictions yet. <a href="/predict">Make your first prediction!</a></p>
+    </div>
+
+    <div th:each="p : ${predictions}"
+         th:class="${'history-card ' + p.riskLevel.toLowerCase() + '-risk'}">
+        <div class="history-header">
+            <span th:class="${'badge-' + p.riskLevel.toLowerCase()}"
+                  th:text="${p.riskLevel}"></span>
+            <span class="history-date" th:text="${p.predictedAt}"></span>
+        </div>
+        <p><strong>Location:</strong>
+            <span th:text="${p.floodData.location}"></span></p>
+        <p><strong>Rainfall:</strong>
+            <span th:text="${p.floodData.rainfall + ' mm'}"></span> &nbsp;|&nbsp;
+            <strong>Water Level:</strong>
+            <span th:text="${p.floodData.waterLevel + ' m'}"></span></p>
+        <p th:text="${p.alertMessage}"></p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">🌊 Flood Prediction System</div>
+    <div class="nav-links">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/predict">New Prediction</a>
+        <a href="/history">My History</a>
+        <a href="/safety">Safety Tips</a>
+        <a href="/logout">Logout</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h2>Welcome, <span th:text="${userName}"></span>! 👋</h2>
+    <p style="color:#666; margin-bottom:30px;">What would you like to do today?</p>
+
+    <div class="features">
+        <div class="feature-card">
+            <h3>🌧️ New Prediction</h3>
+            <p>Enter flood data and get instant risk prediction for your area.</p>
+            <a href="/predict" class="btn-primary">Start Prediction</a>
+        </div>
+        <div class="feature-card">
+            <h3>📊 View History</h3>
+            <p>Check all your previous flood predictions and results.</p>
+            <a href="/history" class="btn-secondary">View History</a>
+        </div>
+        <div class="feature-card">
+            <h3>🛡️ Safety Tips</h3>
+            <p>Learn what to do before, during and after a flood.</p>
+            <a href="/safety" class="btn-secondary">View Tips</a>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>Emergency Helpline: 1078 | Police: 100 | Ambulance: 108</p>
+</footer>
+
+</body>
+</html>

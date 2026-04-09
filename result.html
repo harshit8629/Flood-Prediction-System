@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">🌊 Flood Prediction System</div>
+    <div class="nav-links">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/predict">New Prediction</a>
+        <a href="/history">My History</a>
+        <a href="/logout">Logout</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div th:class="${'result-card ' + prediction.riskLevel.toLowerCase() + '-risk'}">
+
+        <h2>Flood Risk Level:
+            <span th:text="${prediction.riskLevel}"
+                  th:class="${'badge-' + prediction.riskLevel.toLowerCase()}">
+            </span>
+        </h2>
+
+        <div class="info-box">
+            <h3>⚠️ Alert</h3>
+            <p th:text="${prediction.alertMessage}"></p>
+        </div>
+
+        <div class="info-box">
+            <h3>🛡️ Safety Suggestions</h3>
+            <pre th:text="${prediction.safetySuggestions}"></pre>
+        </div>
+
+        <div class="info-box">
+            <h3>📋 Data You Entered</h3>
+            <table class="data-table">
+                <tr><td>Rainfall</td>
+                    <td th:text="${floodData.rainfall + ' mm'}"></td></tr>
+                <tr><td>Water Level</td>
+                    <td th:text="${floodData.waterLevel + ' metres'}"></td></tr>
+                <tr><td>Humidity</td>
+                    <td th:text="${floodData.humidity + ' %'}"></td></tr>
+                <tr><td>Temperature</td>
+                    <td th:text="${floodData.temperature + ' °C'}"></td></tr>
+                <tr><td>Location</td>
+                    <td th:text="${floodData.location}"></td></tr>
+            </table>
+        </div>
+
+        <div class="info-box emergency">
+            <h3>🆘 Emergency Contacts</h3>
+            <p>National Disaster Helpline: <strong>1078</strong></p>
+            <p>Police: <strong>100</strong> &nbsp;|&nbsp;
+                Ambulance: <strong>108</strong> &nbsp;|&nbsp;
+                Fire: <strong>101</strong></p>
+            <p>NDRF Control Room: <strong>011-24363260</strong></p>
+        </div>
+
+        <div style="margin-top:20px;">
+            <a href="/predict" class="btn-primary">New Prediction</a>
+            <a href="/history" class="btn-secondary">View History</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

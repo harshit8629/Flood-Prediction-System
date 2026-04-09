@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Login</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">🌊 Flood Prediction System</div>
+</nav>
+
+<div class="form-container">
+    <h2>Admin Login</h2>
+
+    <div th:if="${error}" class="error-msg" th:text="${error}"></div>
+
+    <form action="/admin/login" method="post">
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Enter admin username" required/>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter admin password" required/>
+        </div>
+        <button type="submit" class="btn-primary">Login as Admin</button>
+    </form>
+    <p style="margin-top:16px;"><a href="/login">← Back to User Login</a></p>
+</div>
+
+</body>
+</html>

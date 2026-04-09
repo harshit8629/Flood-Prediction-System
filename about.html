@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>About</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">🌊 Flood Prediction System</div>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h2>About This Project</h2>
+    <div class="info-box">
+        <p>The Flood Prediction System is a web-based application that helps
+            predict flood risk based on real-time environmental data such as
+            rainfall, river water levels, humidity and temperature.</p>
+        <br/>
+        <h3>How It Works</h3>
+        <p>Users enter current environmental data for their area. Our
+            rule-based prediction engine analyses the data and calculates
+            whether the flood risk is Low, Medium or High. The system then
+            provides safety suggestions and emergency contact information.</p>
+        <br/>
+        <h3>Technology Used</h3>
+        <p>Java Spring Boot | MySQL | Thymeleaf | HTML | CSS</p>
+    </div>
+</div>
+
+</body>
+</html>
