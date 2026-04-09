@@ -1,4 +1,3 @@
-# Flood-Prediction-System
 # 🌊 Flood Prediction System
 
 A full-stack **Flood Prediction Web Application** built using **Spring Boot, Thymeleaf, HTML, CSS, and MySQL**.
