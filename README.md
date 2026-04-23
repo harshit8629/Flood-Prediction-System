@@ -135,7 +135,16 @@ Output: HIGH RISK
 ## 👨‍💻 Author
 
 Harshit Khanna  
-B.Tech (AI/ML / CSE DS)
+B.Tech (AI/ML)
+
+Amit Singh
+B.Tech (AI/ML)
+
+Akshit Kaushal
+B.Tech (AI/ML)
+
+Honey Dhiman
+B.Tech (AI/ML)
 
 ---
 
