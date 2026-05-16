@@ -131,23 +131,6 @@ Output: HIGH RISK
 - Secure authentication (JWT, password hashing)  
 
 ---
-
-## 👨‍💻 Author
-
-Harshit Khanna  
-B.Tech (AI/ML)
-
-Amit Singh
-B.Tech (AI/ML)
-
-Akshit Kaushal
-B.Tech (AI/ML)
-
-Honey Dhiman
-B.Tech (AI/ML)
-
----
-
 ## ⭐ Project Highlights
 
 - API-based real-time prediction  
